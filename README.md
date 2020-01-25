@@ -1,0 +1,1 @@
+Simple OCR tool using Microsoft's OCR (Vision)
