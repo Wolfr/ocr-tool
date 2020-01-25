@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Sample</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="screen.css" media="screen">
+    <script src="scripts.js"></script>
+</head>
+<body>
+
+    <div id="toolbar">
+        <h1>OCR tool</h1>
+    </div>
+
+    <div id="content">
+        <p>Feel free to use this tool... until I run into the API limit. Enter the URL to an image of printed text, click the <strong>Read image</strong> button. This app will try to OCR the text. Created using Microsoft's Cognitive Vision -Johan</p>
+
+        <label for="imageURL">Image to read:</label>
+        <input type="text" name="inputImage" id="imageURL" value="https://live.staticflickr.com/416/31456212961_1864ea91fa_b.jpg" />
+        <button onclick="processImage()">Read image</button>
+        
+
+        <div class="o-flex">
+            <div class="o-flex__item" id="jsonOutput">
+                <p><strong>Response:</strong></p>
+                <textarea id="responseTextArea"></textarea>
+            </div>
+            <div class="o-flex__item o-flex__item--grow">
+                <p><strong>Formatted output:</strong></p>
+                <textarea id="formattedOutput"></textarea>
+            </div>
+            <div class="o-flex__item" id="imageDiv">
+                <p><strong>Source image:</strong></p>
+                <img id="sourceImage" width="400" />
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
